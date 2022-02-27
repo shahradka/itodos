@@ -1,3 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ [type='submit'] {
+    background: #1976d2;
+  }
+}
+
+@layer components {
+  .form-item {
+    @apply pb-4 px-4 lg:w-full;
+  }
+  .action-btn {
+    @apply bg-custom-pink hover:bg-custom-pink-dark
+  }
+  .action-link {
+    @apply text-custom-blue hover:underline
+  }
+}
+
 html,
 body {
   padding: 0;
