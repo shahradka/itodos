@@ -26,7 +26,7 @@ const Form = ({ onSubmit, priorityLevelCount = 0, value }: Props) => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        let result: Task;
+        let result: Task = {} as Task;
         if (e.target) {
             const inputs = e.target.querySelectorAll(".form-item input")
             inputs.forEach((element: any) => {
