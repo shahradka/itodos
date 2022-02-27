@@ -49,8 +49,8 @@ const TaskList = ({ tasks, onDelete, onComplete, onTabChange, onItemClick }: Pro
     return (<>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={currentTab}  onChange={handleTabChange} aria-label="lab API tabs example">
-                <Tab label="Current Jobs" value="undone" />
-                <Tab label="Finished Jobs" value="finished" />
+                <Tab label="Current Tasks" value="undone" />
+                <Tab label="Finished Tasks" value="finished" />
             </Tabs>
         </Box>
             <List className='w-full'>
