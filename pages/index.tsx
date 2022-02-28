@@ -35,9 +35,9 @@ const Index = () => {
     const { finishedTasks } = useGetFinishedTasks();
 
     const queryClient = useQueryClient();
-
+    
     useEffect(() => {
-        queryClient.invalidateQueries('tasks');
+        if(isFinish) queryClient.invalidateQueries('tasks');
     }, [isFinish]);
 
     useEffect(() => {

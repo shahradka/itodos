@@ -26,7 +26,7 @@ const Form = ({ onSubmit, priorityLevelCount = 0, value }: Props) => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        let result: Task = {} as Task;
+        let result= {} as Task;
         if (e.target) {
             const inputs = e.target.querySelectorAll(".form-item input")
             inputs.forEach((element: any) => {
@@ -53,7 +53,7 @@ const Form = ({ onSubmit, priorityLevelCount = 0, value }: Props) => {
                 <InputLabel id="priority-select" className='left-[16px]'>priority</InputLabel>
                 <Select name='priority' labelId="priority-select" label="priority" defaultValue={value?.priority}>
                     {priorityList.map(index => 
-                    <MenuItem value={index}>
+                    <MenuItem key={index} value={index}>
                         {index}
                     </MenuItem>
                     )}
